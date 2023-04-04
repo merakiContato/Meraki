@@ -1,0 +1,326 @@
+/* Fontes para o site */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/*------ Zerando a formatação ------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*------ Editando a fonte padrão ------*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: normal;
+}
+
+h1,
+h2 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #d9d9d9;
+}
+
+p{
+    color: #d9d9d9;
+}
+
+/*------ Estilos de todas as páginas ------*/
+.containerblack {
+    background-image: linear-gradient(to left, #222222, #424242, #222222);
+    background-size: 400% 100%;
+    animation: degrade-animado 20s infinite alternate;
+}
+
+@keyframes degrade-animado {
+
+    /*Animação do fundo mexendo*/
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
+
+#pagservicos button, #pagcontato button a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+#pagini button {
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: #373737;
+    color: white;
+}
+
+#pagservicos button, #pagcontato button {
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: #d9d9d9;
+}
+
+#pagservicos button:hover, #pagini button:hover, #pagcontato button:hover{
+    background-color: #7952b3;
+    box-shadow: 0px 0px 32px -3px rgba(139,99,199,1);
+}
+
+/*------ Menu de navegação ------*/
+nav img {
+    width: 100px;
+}
+
+.nav-item a {
+    height: 30px;
+    position: relative;
+    margin: 0 2px;
+}
+
+.navbar-nav a {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+}
+
+.nav-item a:hover {
+    color: #8a5ece;
+}
+
+.nav-item a:before { /* Animação da linha embaixo dos links */
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    border-radius: 70px;
+    background-color: #7952b3;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-item a:hover:before { /* Animação da linha embaixo dos links */
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+/*------ Primeira página (inicial) ------*/
+#pagini p {
+    color: #373737;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#pagini li {
+    color: white;
+    font-size: 20px;
+}
+
+#pagini h1 {
+    margin-top: 15px;
+    font-size: 80px;
+}
+
+/*------ Segunda página (serviços) ------*/
+#pagservicos h1 {
+    margin-top: 15px;
+    font-size: 60px;
+}
+
+#pagservicos .destaque img {
+    width: 70px;
+    margin: 0 15px 0 5px;
+}
+
+#pagservicos .destaque {
+    padding: 10px;
+    color: #d9d9d9;
+    text-decoration: none;
+    transition: all ease-out 0.2s;
+    width: 100%;
+    height: auto;
+}
+
+#pagservicos .destaque:hover {
+    background: #4e4d4d;
+    transform: scale(1.05);
+}
+
+/*------ Terceira página (sobre) ------*/
+#pagsobre .row h2 {
+    font-size: 70px;
+}
+
+#pagsobre #imgcard img {
+    transform: rotate(30deg);
+    filter: grayscale(100%);
+}
+
+#pagsobre .carousel {
+    background-image: linear-gradient(to left, #dcdada, #b4b4b4, #dcdada);
+    height: 100%;
+}
+
+#pagsobre .carousel h2 {
+    padding-top: 2%;
+    font-size: 80px;
+    color: #373737;
+}
+
+#pagsobre .carousel p {
+    padding: 10px 0px 30px 0px;
+    width: 70%;
+    margin: 0px auto 20px auto;
+    font-size: 30px;
+    color: #373737;
+}
+
+#pagsobre .carousel img {
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+}
+
+/*------ Quarta página (equipe) ------*/
+#pagequipe h1,
+#pagequipe h4 {
+    text-align: center;
+}
+
+#pagequipe h4 {
+    color: #7952b3;
+    font-family: 'Cinzel', serif;
+    text-transform: lowercase;
+    font-weight: bold;
+}
+
+#pagequipe p {
+    color: #424242;
+    font-size: 18px;
+    text-align: center;
+}
+
+.card:hover { /*Efeito dos cards*/
+    cursor: pointer; 
+    transition: all 0.3s ease;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/*------ Formulário (contato) ------*/
+#pagcontato input,
+#pagcontato textarea {
+    border: 1px solid #d9d9d9;
+    background-color: #c3c3c300;
+    border-radius: 10px;
+    color: #d9d9d9;
+}
+
+#pagcontato input:focus,
+#pagcontato textarea:focus {
+    box-shadow: none;
+}
+
+#pagcontato ::placeholder {
+    color: #acabab;
+}
+
+#pagcontato button {
+    font-size: 18px;
+    margin: 10px 4px;
+}
+
+small, label{
+    color: #d9d9d9;
+}
+
+/*------ Rodapé ------*/
+footer .linhahorizontal {
+    width: 100%;
+    height: 2px;
+    border: 1px solid #454545;
+    border-radius: 10px;
+}
+
+footer img {
+    width: 200px;
+}
+
+footer p {
+    text-align: center;
+    color: black;
+}
+
+.containerwhite footer p {
+    color: #d9d9d9;
+}
+
+footer ul {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    position: relative;
+    list-style: none;
+    margin: 0 20px -20px 20px;
+}
+
+.containerblack footer ul li a {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    color: #222222;
+    font-size: 45px;
+    box-shadow: 0 5px 45px #0000001a;
+    backdrop-filter: blur(2px);
+    transition: 0.5s;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.containerwhite footer ul li a {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    color: #d9d9d9;
+    font-size: 45px;
+    box-shadow: 0 5px 45px #0000001a;
+    backdrop-filter: blur(2px);
+    transition: 0.5s;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+footer ul li a:hover {
+    transform: translateY(-20px);
+    color: #7952b3;
+}
+
+footer ul li a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background: #ffffff80;
+    transform: skewX(45deg) translateX(150px);
+    transition: 0.5s;
+}
+
+footer ul li a:hover:before {
+    transform: skewX(45deg) translateX(-150px);
+}
